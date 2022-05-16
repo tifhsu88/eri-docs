@@ -1,4 +1,5 @@
-# eri project
+# Mapping Center Pivot Irrigation
+
 
 Here we will explain setting up processes like:
 - setting up Label Studio on a server
