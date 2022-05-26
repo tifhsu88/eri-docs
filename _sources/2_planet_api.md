@@ -1,8 +1,8 @@
 # Pulling images from the PlanetLab API
 Necessary items to proceed:
-[ ] **PlanetLab API key**: Your API key can be found on the Planet Lab website -> Login -> Click on **My Settings** tab -> Look for **API Key**
+- ***PlanetLab API key**: Your API key can be found on the Planet Lab website -> Login -> Click on **My Settings** tab -> Look for **API Key**
 
-[ ] **Script for pulling images**: Download and open the planet_api_key notebook from our [Github](https://github.com/mrevanishere/ds-capstone-ERI/tree/main/notebooks_)
+- **Script for pulling images**: Download and open the planet_api_key notebook from our [Github](https://github.com/mrevanishere/ds-capstone-ERI/tree/main/notebooks_)
 
 
 1. Once you have your API key and the notebook open, run through the code and replace your key in designated code chunk under the **Image Preparation** section.

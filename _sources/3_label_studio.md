@@ -25,5 +25,5 @@ For our project, we only focused on identifying full center pivots, regardless o
 
 - Once you’re done annotating each pivot, save your changes and return to the home page to export the labeled images in the JSON-MIN format. 
 
-![label-studio-export-instructions](images/label_studio_export)
+![label-studio-export-instructions](images/label_studio_export.png)
 
