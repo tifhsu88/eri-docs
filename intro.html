@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Setting up Label Studio" href="markdown.html" />
+    <link rel="next" title="Setting up Label Studio" href="1_aois.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -75,11 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="_static/WAVES_logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Earth Research Institute (ERI)</h1>
@@ -99,18 +94,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
+  <a class="reference internal" href="1_aois.html">
    Setting up Label Studio
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
+  <a class="reference internal" href="2_planet_api.html">
+   Pulling images from the PlanetLab API
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
+  <a class="reference internal" href="3_label_studio.html">
+   Annotating Images
   </a>
  </li>
 </ul>
@@ -201,8 +196,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mapping-center-pivot-irrigation">
-   Mapping Center Pivot Irrigation
+  <a class="reference internal nav-link" href="#combining-computer-vision-and-satellite-imagery-to-detect-center-pivot-irrigation">
+   Combining computer vision and satellite imagery to detect center pivot irrigation
   </a>
  </li>
 </ul>
@@ -226,8 +221,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mapping-center-pivot-irrigation">
-   Mapping Center Pivot Irrigation
+  <a class="reference internal nav-link" href="#combining-computer-vision-and-satellite-imagery-to-detect-center-pivot-irrigation">
+   Combining computer vision and satellite imagery to detect center pivot irrigation
   </a>
  </li>
 </ul>
@@ -241,21 +236,22 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="mapping-center-pivot-irrigation">
-<h2>Mapping Center Pivot Irrigation<a class="headerlink" href="#mapping-center-pivot-irrigation" title="Permalink to this headline">¶</a></h2>
-<p>Here we will explain setting up processes like:</p>
+<div class="section" id="combining-computer-vision-and-satellite-imagery-to-detect-center-pivot-irrigation">
+<h2>Combining computer vision and satellite imagery to detect center pivot irrigation<a class="headerlink" href="#combining-computer-vision-and-satellite-imagery-to-detect-center-pivot-irrigation" title="Permalink to this headline">¶</a></h2>
+<p>Irrigated agriculture is expanding rapidly across southern Africa. Because this expansion is occurring without much regulation or monitoring, it’s not exactly clear where and when expansion is happening, or the fate of expanded agriculture. In most expansionary cycles, there is a boom-and-bust dynamic, where many investments fail quickly and only a few persist. We’re interested in mapping these dynamics over the past 5-10 years across the world and monitoring them going forward.
+Our project will set up the necessary infrastructure, generate appropriate label data, and disseminate that data for training a computer vision model that can be used to monitor and map agricultural expansion and irrigated water use.</p>
+<p>The project pipeline is broken down into a series of steps:</p>
 <ul class="simple">
-<li><p>setting up Label Studio on a server</p></li>
-<li><p>Selecting Areas of Interest (AOI)</p></li>
-<li><p>Extracting PlanetLab images from an AOI</p></li>
-<li><p>Data augmentation pipeline</p></li>
-<li><p>Setting up the model</p></li>
+<li><p>Finding and downloading AOIs (Areas of Interest)</p></li>
+<li><p>Pulling images from the PlanetLab API</p></li>
+<li><p>Annotating Images</p></li>
+<li><p>Data Augmentation</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Setting up Label Studio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_aois.html">Setting up Label Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_planet_api.html">Pulling images from the PlanetLab API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_label_studio.html">Annotating Images</a></li>
 </ul>
 </div>
 </div>
@@ -286,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <a class='right-next' id="next-link" href="1_aois.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Setting up Label Studio</p>
