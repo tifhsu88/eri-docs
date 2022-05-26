@@ -75,6 +75,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/WAVES_logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Earth Research Institute (ERI)</h1>
@@ -95,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_aois.html">
-   Setting up Label Studio
+   Finding AOIs
   </a>
  </li>
  <li class="toctree-l1">
@@ -238,35 +243,32 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Annotating Images<a class="headerlink" href="#annotating-images" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-this-step-we-will-break-down-the-process-of-setting-up-label-studio-importing-an-image-and-labeling-the-image">
 <h2>In this step, we will break down the process of setting up Label Studio, importing an image, and labeling the image.<a class="headerlink" href="#in-this-step-we-will-break-down-the-process-of-setting-up-label-studio-importing-an-image-and-labeling-the-image" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Label Studio</strong>
 <a class="reference external" href="https://labelstud.io">Label Studio</a> is an open source data labeling tool that allows users to label images, audio, text, and videos.</p>
 </div>
-</div>
-<ol class="simple">
+<ul class="simple">
 <li><p>Start off by installing Label Studio on your computer. Head to their <a class="reference external" href="https://labelstud.io/guide/index.html">documentation</a>  to check out their quickstart directions!</p></li>
 <li><p>After creating an account, launch Label Studio and create a new project.</p></li>
-</ol>
-<p>!label-studio-label-settings(images/label_studio_label_settings.png)</p>
-<ol class="simple">
-<li><p>Then, create a label name called “Center Pivot.”</p></li>
-<li><p>Now we can begin labeling!</p></li>
-</ol>
+</ul>
+<p>[]!label-studio-label-settings(images/label_studio_label_settings.png)</p>
 <ul class="simple">
+<li><p>Then, create a label name called “Center Pivot.”</p></li>
+<li><p>Now we can begin labeling!</p>
+<ul>
 <li><p>Begin by importing the .tif image you pulled from the Planet Lab API notebook. Then select the <strong>Center Pivot</strong> label and use the <strong>ellipse region</strong> tool to create a label for each center pivot.</p></li>
+</ul>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>What to label</strong>
-*For our project, we only focused on identifying full center pivots, regardless of whether it is active or not. In the future, we plan to begin integrating partial center pivots (look like pacmans) as well as classifying between active and inactive pivots.</p>
+<p>*For our project, we only focused on identifying full center pivots, regardless of whether it is active or not. In the future, we plan to begin integrating partial center pivots (look like pacmans) as well as classifying between active and inactive pivots.</p>
 </div>
-<ol class="simple">
+<ul class="simple">
 <li><p>Once you’re done annotating each pivot, save your changes and return to the home page to export the labeled images in the JSON-MIN format.</p></li>
-</ol>
-<p>!label-studio-export-instructions(images/label_studio_export)</p>
+</ul>
+<p>[]!label-studio-export-instructions(images/label_studio_export)</p>
 </div>
 </div>
 
