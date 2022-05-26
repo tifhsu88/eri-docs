@@ -10,6 +10,6 @@ To begin accumulating coordinates in the GeoJSON format, navigate to [geojson.io
 Center pivots are generally located around bodies of water. Once you have located the area of interest, select the *rectangle* selection tool and outline the area. The coordinates should pop up on the right hand side. 
 ```
 
-![geojson_demo](geojson_demo.gif)
+![geojson_demo](images/geojson_demo.gif)
 
 Proceed to the [next step](https://tifhsu88.github.io/eri-docs/2_planet_api.html) to learn how to use the collected coordinates to pull images from the PlanetLab API!

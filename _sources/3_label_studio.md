@@ -21,7 +21,7 @@
 
 For our project, we only focused on identifying full center pivots, regardless of whether it is active or not. In the future, we plan to begin integrating partial center pivots (look like pacmans) as well as classifying between active and inactive pivots.
 ```
-![label-studio-demo](label-studio-demo.gif)
+![label-studio-demo](images/label-studio-demo.gif)
 
 - Once you’re done annotating each pivot, save your changes and return to the home page to export the labeled images in the JSON-MIN format. 
 
