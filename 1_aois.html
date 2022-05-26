@@ -216,12 +216,15 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="finding-aois">
 <h1>Finding AOIs<a class="headerlink" href="#finding-aois" title="Permalink to this headline">¶</a></h1>
-<p>For our project, the Areas of Interest, or AOIs, are images of center pivots from across the world. We aim to compile a diverse dataset composed of center pivots varying in size and color to optimize the model performance.</p>
-<p>In order to pull images through Planet Lab’s API, we have to first specify the coordinates of the specified area. The file format we use is a GeoJSON file, which encodes geographic data features while maintaining non-spatial attributes.</p>
-<p>To begin accumulating coordinates in the GeoJSON format, navigate to <a class="reference external" href="http://geojson.io">geojson.io</a>. Then switch to satellite view and begin the search for center pivots! Center pivots are generally located around bodies of water. Once you have located the area of interest, select the <em>rectangle</em> selection tool and outline the area. The coordinates should pop up on the right hand side.</p>
-<p>Here’s a GIF of the process:</p>
-<p>[insert GIF]</p>
-<p>Proceed to the <span class="xref myst">next step</span> to learn how to use the collected coordinates to pull images from the PlanetLab API!</p>
+<p>For our project, the Areas of Interest, or <strong>AOIs</strong>, are images of center pivots from across the world. We aim to compile a diverse dataset composed of center pivots varying in size and color to optimize the model performance.</p>
+<p>In order to pull images through Planet Lab’s API, we have to first specify the coordinates of the specified area. The file format we use is a <em>GeoJSON</em> file, which encodes geographic data features while maintaining non-spatial attributes.</p>
+<p>To begin accumulating coordinates in the GeoJSON format, navigate to <span class="xref myst">geojson.io</span>. Then switch to satellite view and begin the search for center pivots!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Center pivots are generally located around bodies of water. Once you have located the area of interest, select the <em>rectangle</em> selection tool and outline the area. The coordinates should pop up on the right hand side.</p>
+</div>
+<p><span class="xref myst">geojson_demo</span></p>
+<p>Proceed to the <a class="reference external" href="https://tifhsu88.github.io/eri-docs/2_planet_api.html">next step</a> to learn how to use the collected coordinates to pull images from the PlanetLab API!</p>
 </div>
 
     <script type="text/x-thebe-config">
