@@ -3,9 +3,9 @@
 **download_quads(urls, directory)**
 - Saves quads from list of quad metadata to given directory
     - **Parameters:**
-      	- urls : list
+      	- urls : *list*
       	  	- List of quad metadata
-      	- directory : string
+      	- directory : *string*
       	  	- Path to save downloaded quads
     - **Returns:**
       	- none
