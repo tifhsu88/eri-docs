@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Annotating Images &#8212; Earth Research Institute (ERI)</title>
+    <title>gen_data &#8212; Earth Research Institute (ERI)</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Augmentation" href="4_data_augmentation.html" />
-    <link rel="prev" title="Pulling images from the PlanetLab API" href="2_planet_api.html" />
+    <link rel="prev" title="sliding_window" href="sliding_window.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,24 +102,24 @@ const thebe_selector_output = ".output, .cell_output"
   General Process
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="1_aois.html">
+  <a class="reference internal" href="../process/1_aois.html">
    Finding AOIs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2_planet_api.html">
+  <a class="reference internal" href="../process/2_planet_api.html">
    Pulling images from the PlanetLab API
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../process/3_label_studio.html">
    Annotating Images
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="4_data_augmentation.html">
+  <a class="reference internal" href="../process/4_data_augmentation.html">
    Data Augmentation
   </a>
  </li>
@@ -132,27 +131,27 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/get_coords.html">
+  <a class="reference internal" href="get_coords.html">
    get_coords
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/get_quad_urls.html">
+  <a class="reference internal" href="get_quad_urls.html">
    get_quad_urls
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/download_quads.html">
+  <a class="reference internal" href="download_quads.html">
    download_quads
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/combine_crop_quads.html">
+  <a class="reference internal" href="combine_crop_quads.html">
    combine_crop_quads
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/prepare_images.html">
+  <a class="reference internal" href="prepare_images.html">
    prepare_images
   </a>
  </li>
@@ -164,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/binary_mask.html">
+  <a class="reference internal" href="binary_mask.html">
    binary_mask
   </a>
  </li>
@@ -174,44 +173,44 @@ const thebe_selector_output = ".output, .cell_output"
   Creating the Dataset
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/chip_is_empty.html">
+  <a class="reference internal" href="chip_is_empty.html">
    chip_is_empty
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/get_rotated.html">
+  <a class="reference internal" href="get_rotated.html">
    get_rotated
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/get_flipped.html">
+  <a class="reference internal" href="get_flipped.html">
    get_flipped
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/load_file.html">
+  <a class="reference internal" href="load_file.html">
    load_file
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/save_image.html">
+  <a class="reference internal" href="save_image.html">
    save_image
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/save_label.html">
+  <a class="reference internal" href="save_label.html">
    save_label
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/sliding_window.html">
+  <a class="reference internal" href="sliding_window.html">
    sliding_window
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../functions/gen_data.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    gen_data
   </a>
  </li>
@@ -256,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/process/3_label_studio.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/functions/gen_data.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -276,7 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fprocess/3_label_studio.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffunctions/gen_data.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -304,7 +303,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Annotating Images</h1>
+                <h1>gen_data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -315,36 +314,58 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="annotating-images">
-<h1>Annotating Images<a class="headerlink" href="#annotating-images" title="Permalink to this headline">¶</a></h1>
-<p><strong>In this step, we will break down the process of setting up Label Studio, importing an image, and labeling the image.</strong></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Label Studio</strong>
-<a class="reference external" href="https://labelstud.io">Label Studio</a> is an open source data labeling tool that allows users to label images, audio, text, and videos.</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="gen-data">
+<h1>gen_data<a class="headerlink" href="#gen-data" title="Permalink to this headline">¶</a></h1>
+<p><strong>gen_data(images_dir, labels_dir, output_path, chip_size=256, channels=4, augment=False)</strong></p>
 <ul class="simple">
-<li><p>Start off by installing Label Studio on your computer. Head to their <a class="reference external" href="https://labelstud.io/guide/index.html">documentation</a>  to check out their quickstart directions!</p></li>
-<li><p>After creating an account, launch Label Studio and create a new project.</p></li>
-</ul>
-<p><img alt="label-studio-label-settings" src="process/images/label_studio_label_settings.png" /></p>
-<ul class="simple">
-<li><p>Then, create a label name called “Center Pivot.”</p></li>
-<li><p>Now we can begin labeling!</p>
+<li><p>Chip and augment raw image/label pairs. Stores the image/label pairs assingle files. Note: the raw images and labels must be named the same and in different folders</p>
 <ul>
-<li><p>Begin by importing the .tif image you pulled from the Planet Lab API notebook. Then select the <strong>Center Pivot</strong> label and use the <strong>ellipse region</strong> tool to create a label for each center pivot.</p></li>
+<li><p><strong>Parameters:</strong></p>
+<ul>
+<li><p>images_dir: <em>string</em></p>
+<ul>
+<li><p>Directory to where raw images are placed</p></li>
+</ul>
+</li>
+<li><p>labels_dir : <em>string</em></p>
+<ul>
+<li><p>Directory to where labels are placed</p></li>
+</ul>
+</li>
+<li><p>output_path : <em>string</em></p>
+<ul>
+<li><p>Directory to where augmented image/label pairs will be saved</p></li>
+</ul>
+</li>
+<li><p>chip_size: <em>int</em></p>
+<ul>
+<li><p>Length of size to chip image to</p></li>
+</ul>
+</li>
+<li><p>channels : <em>int</em></p>
+<ul>
+<li><p>Number of channels the image data contains</p></li>
+</ul>
+</li>
+<li><p>augment : <em>bool</em></p>
+<ul>
+<li><p>if True, augments (flips and rotates) each chip</p></li>
 </ul>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For our project, we only focused on identifying full center pivots, regardless of whether it is active or not. In the future, we plan to begin integrating partial center pivots (look like pacmans) as well as classifying between active and inactive pivots.</p>
-</div>
-<p><img alt="label-studio-demo" src="process/images/label-studio-demo.gif" /></p>
-<ul class="simple">
-<li><p>Once you’re done annotating each pivot, save your changes and return to the home page to export the labeled images in the JSON-MIN format.</p></li>
+</li>
+<li><p><strong>Returns:</strong></p>
+<ul>
+<li><p>yield: <em>tuple</em>: (int, int, array)</p>
+<ul>
+<li><p>Yields x coordinate, y coordinate, chipped image as a tuple</p></li>
 </ul>
-<p><img alt="label-studio-export-instructions" src="process/images/label_studio_export.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -360,7 +381,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./process"
+            path: "./functions"
         },
         predefinedOutput: true
     }
@@ -372,19 +393,12 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="2_planet_api.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="sliding_window.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Pulling images from the PlanetLab API</p>
+            <p class="prev-next-title">sliding_window</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="4_data_augmentation.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Augmentation</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

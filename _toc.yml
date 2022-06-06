@@ -20,4 +20,13 @@ parts:
 - caption: Converting Annotations to Binary Mask
   chapters:
   - file: functions/binary_mask
-
+- caption: Creating the Dataset
+  chapters:
+  - file: functions/chip_is_empty
+  - file: functions/get_rotated
+  - file: functions/get_flipped
+  - file: functions/load_file
+  - file: functions/save_image
+  - file: functions/save_label
+  - file: functions/sliding_window
+  - file: functions/gen_data    

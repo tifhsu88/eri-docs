@@ -169,6 +169,53 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating the Dataset
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/chip_is_empty.html">
+   chip_is_empty
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/get_rotated.html">
+   get_rotated
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/get_flipped.html">
+   get_flipped
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/load_file.html">
+   load_file
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/save_image.html">
+   save_image
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/save_label.html">
+   save_label
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/sliding_window.html">
+   sliding_window
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/gen_data.html">
+   gen_data
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -250,19 +297,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-this-step-we-will-break-down-the-process-of-augmenting-our-data">
-   In this step, we will break down the process of augmenting our data.
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -275,19 +309,6 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-this-step-we-will-break-down-the-process-of-augmenting-our-data">
-   In this step, we will break down the process of augmenting our data.
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -296,8 +317,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-augmentation">
 <h1>Data Augmentation<a class="headerlink" href="#data-augmentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-this-step-we-will-break-down-the-process-of-augmenting-our-data">
-<h2>In this step, we will break down the process of augmenting our data.<a class="headerlink" href="#in-this-step-we-will-break-down-the-process-of-augmenting-our-data" title="Permalink to this headline">¶</a></h2>
+<p><strong>In this step, we will break down the process of augmenting our data.</strong></p>
 <p>Before the data augmentation process, we first need to convert the JSON annotations to binary masks.  To do so, input the path to the JSON file into the binary_mask() function (github).  This function will return a list of binary masks converted from all of the annotated images in your project.</p>
 <p>Next, each raw image and label pair goes through the <a class="reference external" href="http://dataset.py">dataset.py</a> file. This file splits and augments each image and label pair into chips decided by the chip size. It first generates a sliding window over each pair, then augments each window and saves each image. Each window is rotated (90, 180, 270) then each is flipped (horizontally, vertically) to multiply the original window by 12 times.</p>
 <div class="admonition note">
@@ -305,7 +325,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Any window with no labeled pixel would not be saved. This can be changed by removing the call to chip_is_empty().</p>
 </div>
 <p>Every chip is then saved as .tif files in the specified directory. Each image and label pair should have the same base file name. The image should end with <code class="docutils literal notranslate"><span class="pre">_mosaic.tif</span></code> and the label should end with <code class="docutils literal notranslate"><span class="pre">_label.tif</span></code>. The data is now ready for training.</p>
-</div>
 </div>
 
     <script type="text/x-thebe-config">

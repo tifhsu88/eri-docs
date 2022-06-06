@@ -1,6 +1,6 @@
 # Annotating Images
 
-### In this step, we will break down the process of setting up Label Studio, importing an image, and labeling the image. 
+**In this step, we will break down the process of setting up Label Studio, importing an image, and labeling the image.**
 
 
 ```{note}

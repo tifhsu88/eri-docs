@@ -1,4 +1,7 @@
 # Pulling images from the PlanetLab API
+
+**In this step, we break down how to use PlanetLab API to download images for annotating.**
+
 Necessary items to proceed:
 - **PlanetLab API key**: Your API key can be found on the Planet Lab website -> Login -> Click on **My Settings** tab -> Look for **API Key**
 
