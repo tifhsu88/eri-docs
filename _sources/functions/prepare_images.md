@@ -14,4 +14,4 @@
       	- geojson_path : *string*
       	  	- Path to geojson file of desired AOI
     - **Returns:**
-      	- none
+      	- *none*

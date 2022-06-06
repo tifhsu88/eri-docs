@@ -1,6 +1,6 @@
 # Data Augmentation
 
-### In this step, we will break down the process of augmenting our data. 
+**In this step, we will break down the process of augmenting our data.**
 
 Before the data augmentation process, we first need to convert the JSON annotations to binary masks.  To do so, input the path to the JSON file into the binary_mask() function (github).  This function will return a list of binary masks converted from all of the annotated images in your project.
 
