@@ -14,4 +14,4 @@ Once you have your API key and the notebook open, run through the code and repla
 Then, follow the instructions to add your GeoJSON as a dictionary in the **Query Parameters** section and run through the notebook. The output should be an image in a TIF format. 
 
 
-The [next step](https://tifhsu88.github.io/eri-docs/3_label_studio.html) will take you through the process of using Label Studio to annotate our images!
+The [next step](https://tifhsu88.github.io/eri-docs/process/3_label_studio.html) will take you through the process of using Label Studio to annotate our images!

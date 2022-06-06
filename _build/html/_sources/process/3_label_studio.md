@@ -11,7 +11,7 @@
 - Start off by installing Label Studio on your computer. Head to their [documentation](https://labelstud.io/guide/index.html)  to check out their quickstart directions!
 - After creating an account, launch Label Studio and create a new project. 
 
-![label-studio-label-settings](images/label_studio_label_settings.png)
+![label-studio-label-settings](/images/label_studio_label_settings.png)
 
 - Then, create a label name called “Center Pivot.”
 - Now we can begin labeling!
@@ -21,9 +21,12 @@
 
 For our project, we only focused on identifying full center pivots, regardless of whether it is active or not. In the future, we plan to begin integrating partial center pivots (look like pacmans) as well as classifying between active and inactive pivots.
 ```
-![label-studio-demo](images/label-studio-demo.gif)
+![label-studio-demo](/images/label-studio-demo.gif)
 
 - Once you’re done annotating each pivot, save your changes and return to the home page to export the labeled images in the JSON-MIN format. 
 
-![label-studio-export-instructions](images/label_studio_export.png)
+![label-studio-export-instructions](/images/label_studio_export.png)
+
+The [next step](https://tifhsu88.github.io/eri-docs/process/4_data_augmentation.html) will take you through the process of data augmentation!
+
 
