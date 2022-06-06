@@ -1,11 +1,13 @@
-# Welcome to your Jupyter Book
+# Overview
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+### Combining computer vision and satellite imagery to detect center pivot irrigation
 
-Check out the content pages bundled with this sample book to see more.
+Irrigated agriculture is expanding rapidly across southern Africa. Because this expansion is occurring without much regulation or monitoring, it’s not exactly clear where and when expansion is happening, or the fate of expanded agriculture. In most expansionary cycles, there is a boom-and-bust dynamic, where many investments fail quickly and only a few persist. We’re interested in mapping these dynamics over the past 5-10 years across the world and monitoring them going forward.
+
+
+Our project will set up the necessary infrastructure, generate appropriate label data, and disseminate that data for training a computer vision model that can be used to monitor and map agricultural expansion and irrigated water use.
+
+The project pipeline is broken down into a series of steps:
 
 ```{tableofcontents}
 ```

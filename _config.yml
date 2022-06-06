@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
-logo: logo.png
+title: Earth Research Institute (ERI) 
+author: Ashley Grinstead, Evan Bui, Tiffany Hsu, Tristan Chen
+logo: images/WAVES_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

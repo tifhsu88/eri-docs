@@ -3,7 +3,12 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+- caption: General Process
+  chapters:
+  - file: process/1_aois
+  - file: process/2_planet_api
+  - file: process/3_label_studio
+  - file: 4_data_augmentation
+
+ 
