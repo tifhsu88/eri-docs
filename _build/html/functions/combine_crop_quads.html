@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>get_quad_urls &#8212; Earth Research Institute (ERI)</title>
+    <title>combine_crop_quads &#8212; Earth Research Institute (ERI)</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="get_coords" href="get_coords.html" />
+    <link rel="next" title="prepare_images" href="prepare_images.html" />
+    <link rel="prev" title="download_quads" href="download_quads.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,33 +119,53 @@ const thebe_selector_output = ".output, .cell_output"
    Annotating Images
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../process/4_data_augmentation.html">
    Data Augmentation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="get_coords.html">
-     get_coords
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  functions
+  Image Downloading
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="get_coords.html">
+   get_coords
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="get_quad_urls.html">
+   get_quad_urls
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="download_quads.html">
+   download_quads
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   get_quad_urls
+   combine_crop_quads
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prepare_images.html">
+   prepare_images
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Converting Annotations to Binary Mask
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="binary_mask.html">
+   binary_mask
   </a>
  </li>
 </ul>
@@ -188,7 +209,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/functions/get_quad_urls.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/functions/combine_crop_quads.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -208,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffunctions/get_quad_urls.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffunctions/combine_crop_quads.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -236,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>get_quad_urls</h1>
+                <h1>combine_crop_quads</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -247,38 +268,34 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="get-quad-urls">
-<h1>get_quad_urls<a class="headerlink" href="#get-quad-urls" title="Permalink to this headline">¶</a></h1>
-<p><strong>get_quad_urls(api_key, mosaic_name, aoi_coords)</strong></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="combine-crop-quads">
+<h1>combine_crop_quads<a class="headerlink" href="#combine-crop-quads" title="Permalink to this headline">¶</a></h1>
+<p><strong>combine_crop_quads(directory, aoi_name, geojson_path)</strong></p>
 <ul class="simple">
-<li><p>Searches and returns list of metadata for the quads required to create a mosaic fitting the given AOI coordinates</p>
+<li><p>Merges quads in the given directory and crops to fit AOI coordinates. Downloads the merged and the cropped TIF files in the current working directory</p>
 <ul>
 <li><p><strong>Parameters:</strong></p>
 <ul>
-<li><p>api_key : <em>string</em></p>
+<li><p>directory : <em>string</em></p>
 <ul>
-<li><p>Your Planet API key</p></li>
+<li><p>Path to where quads are saved</p></li>
 </ul>
 </li>
-<li><p>mosaic_name : <em>string</em></p>
+<li><p>aoi_name : <em>string</em></p>
 <ul>
-<li><p>The name of the Planet basemap mosaic to search from</p></li>
+<li><p>Name to be given to merged and cropped TIF files</p></li>
 </ul>
 </li>
-<li><p>aoi_coords : <em>string</em></p>
+<li><p>geojson_path : <em>string</em></p>
 <ul>
-<li><p>String of AOI coordinates separated by commas</p></li>
+<li><p>Path to geojson file of desired AOI</p></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p><strong>Returns:</strong></p>
 <ul>
-<li><p>out: <em>list</em></p>
-<ul>
-<li><p>List of quad metadata</p></li>
-</ul>
-</li>
+<li><p>none</p></li>
 </ul>
 </li>
 </ul>
@@ -311,12 +328,19 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="get_coords.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="download_quads.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">get_coords</p>
+            <p class="prev-next-title">download_quads</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="prepare_images.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">prepare_images</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

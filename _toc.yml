@@ -9,6 +9,15 @@ parts:
   - file: process/1_aois
   - file: process/2_planet_api
   - file: process/3_label_studio
-  - file: 4_data_augmentation
+  - file: process/4_data_augmentation
+- caption: Image Downloading
+  chapters:
+  - file: functions/get_coords
+  - file: functions/get_quad_urls
+  - file: functions/download_quads
+  - file: functions/combine_crop_quads
+  - file: functions/prepare_images
+- caption: Converting Annotations to Binary Mask
+  chapters:
+  - file: functions/binary_mask
 
- 
