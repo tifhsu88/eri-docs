@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>get_coords &#8212; Earth Research Institute (ERI)</title>
+    <title>get_quad_urls &#8212; Earth Research Institute (ERI)</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -163,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/functions/get_coords.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/functions/get_quad_urls.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffunctions/get_coords.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffunctions/get_quad_urls.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -211,7 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>get_coords</h1>
+                <h1>get_quad_urls</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -222,20 +222,38 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="get-coords">
-<h1>get_coords<a class="headerlink" href="#get-coords" title="Permalink to this headline">¶</a></h1>
-<p><strong>get_coords(geojson_path)</strong></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="get-quad-urls">
+<h1>get_quad_urls<a class="headerlink" href="#get-quad-urls" title="Permalink to this headline">¶</a></h1>
+<p><strong>get_quad_urls(api_key, mosaic_name, aoi_coords)</strong></p>
 <ul class="simple">
-<li><p>Returns a string of coordinates from a geojson file</p>
+<li><p>Searches and returns list of metadata for the quads required to create a mosaic fitting the given AOI coordinates</p>
 <ul>
-<li><p><strong>Parameters: geojson_path : string</strong></p>
+<li><p><strong>Parameters:</strong></p>
 <ul>
-<li><p>Path to geojson file of desired AOI</p></li>
+<li><p>api_key : string</p>
+<ul>
+<li><p>Your Planet API key</p></li>
 </ul>
 </li>
-<li><p><strong>Returns:       out: string</strong></p>
+<li><p>mosaic_name : string</p>
+<ul>
+<li><p>The name of the Planet basemap mosaic to search from</p></li>
+</ul>
+</li>
+<li><p>aoi_coords : string</p>
 <ul>
 <li><p>String of AOI coordinates separated by commas</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Returns:</strong></p>
+<ul>
+<li><p>out: list</p>
+<ul>
+<li><p>List of quad metadata</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
