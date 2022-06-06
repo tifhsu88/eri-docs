@@ -8,4 +8,4 @@
       	- directory : *string*
       	  	- Path to save downloaded quads
     - **Returns:**
-      	- none
+      	- *none*
